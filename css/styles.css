@@ -100,6 +100,8 @@ body {
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-nav.current::after {
@@ -165,7 +167,6 @@ body {
 
 .icon-contact:hover,
 .icon-contact:focus {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--link-color);
 }
 
@@ -223,6 +224,8 @@ button {
   color: var(--white-color);
   background: var(--link-color);
 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   cursor: pointer;
   font-family: inherit;
 
@@ -264,17 +267,6 @@ button {
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--button-color);
-}
-
-.icon-team .icon-color {
-  fill: currentColor;
-}
-
-.icon-team:hover,
-.icon-team:focus {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--link-color);
-  border-radius: 22px;
 }
 
 .other-info1 {
@@ -405,7 +397,6 @@ img {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  transition: color 250ms;
 }
 
 .icon-team {
@@ -417,11 +408,14 @@ img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 22px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team:hover,
 .icon-team:focus {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--white-color);
 }
 
@@ -429,8 +423,13 @@ img {
   color: var(--border-cleint);
 }
 
-.icon-color {
+.icon-team .icon-color {
   fill: currentColor;
+}
+
+.icon-team:hover,
+.icon-team:focus {
+  background-color: var(--link-color);
 }
 
 /**CLIENT*/
@@ -448,6 +447,8 @@ svg {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-client {
@@ -457,24 +458,24 @@ svg {
   border-radius: 4px;
   border: 1px solid var(--border-client);
   border-radius: 4px;
-  transition: color 250ms;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-main-cl:hover .icon-client,
 .icon-main-cl:focus .icon-client {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-color: var(--link-color);
 }
 
 .icon-main-cl:hover .icon-client,
 .icon-main-cl:focus .icon-client {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--link-color);
 }
 
 .icon-main-cl {
   color: var(--border-cleint);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-client {
@@ -524,6 +525,9 @@ svg {
   border-radius: 22px;
   background: var(--border-footer);
   color: var(--white-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-color2 {
@@ -534,7 +538,6 @@ svg {
 .icon-team2:focus {
   background-color: var(--link-color);
   border-radius: 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer {
@@ -568,7 +571,6 @@ li {
 .contact2:hover,
 .contact2:focus {
   color: var(--link-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact2 {
@@ -576,6 +578,8 @@ li {
   line-height: 1.71;
   color: var(--contactfooter-color);
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -655,7 +659,7 @@ li {
   background-color: var(--work-details);
 
   transform: translateY(100%);
-  transition: transform 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-name {
@@ -674,7 +678,6 @@ li {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--grey-color);
-
   margin: 0;
 }
 
@@ -707,7 +710,6 @@ li {
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -716,7 +718,6 @@ li {
 .work-anime:hover .work-details,
 .work-anime:focus .work-details {
   transform: translateY(0%);
-  transition: transform 250ms;
   display: block;
 }
 
@@ -747,8 +748,7 @@ li {
 
   transform: scale(1);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -788,9 +788,9 @@ li {
   min-width: 30px;
 }
 
-.close-button:hover,
-.close-button:focus {
-	background-color: var(--link-color);
+.close-modal:hover,
+.close-modal:focus {
+  fill: var(--link-color);
 }
 
 .close-modal {
