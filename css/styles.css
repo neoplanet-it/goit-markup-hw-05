@@ -181,7 +181,7 @@ body {
 /**MAIN BANER*/
 
 .foto-baner {
-  max-width: 1600px;
+  max-width: 1900px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -410,8 +410,8 @@ img {
   background-position: center;
   border-radius: 22px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-team:hover,
@@ -447,35 +447,29 @@ svg {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-client {
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  border: 1px solid var(--border-client);
-  border-radius: 4px;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-main-cl:hover .icon-client,
-.icon-main-cl:focus .icon-client {
+.icon-main-cl:hover,
+.icon-main-cl:focus {
   border-color: var(--link-color);
-}
-
-.icon-main-cl:hover .icon-client,
-.icon-main-cl:focus .icon-client {
   color: var(--link-color);
 }
 
 .icon-main-cl {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border-radius: 4px;
+
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-client);
   color: var(--border-cleint);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-client {
@@ -519,14 +513,10 @@ svg {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 22px;
-  background: var(--border-footer);
+  border-radius: 50%;
+  background-color: var(--border-footer);
   color: var(--white-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -537,7 +527,6 @@ svg {
 .icon-team2:hover,
 .icon-team2:focus {
   background-color: var(--link-color);
-  border-radius: 22px;
 }
 
 footer {
@@ -704,13 +693,14 @@ li {
   border-right: 1px solid #eeeeee;
 }
 
-.portfolio-link {
+.project-list .portfolio-link {
+	display: block;
   text-decoration: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -718,7 +708,6 @@ li {
 .work-anime:hover .work-details,
 .work-anime:focus .work-details {
   transform: translateY(0%);
-  display: block;
 }
 
 /**CONTAINER+SECTION*/
@@ -770,6 +759,8 @@ li {
   visibility: hidden;
   pointer-events: none;
   transform: scale(0);
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button {
