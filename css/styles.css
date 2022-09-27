@@ -182,9 +182,12 @@ body {
 
 /**MAIN BANER*/
 
-.foto-baner {
-  max-width: 1900px;
-  height: 600px;
+.main-baner {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background: var(--background-color);
@@ -194,12 +197,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.main-baner {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
 }
 
 .baner {
@@ -612,6 +609,9 @@ li {
   border-radius: 4px;
   padding: 6px 22px;
   min-width: 23px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-click {
